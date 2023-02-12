@@ -1,16 +1,11 @@
 public class MergeSort {
 
-    public static void imprimir(int[] vetor) {
-        for (int valor : vetor) {
-            System.out.print(valor + " ");
-        }
-        System.out.println();
-    }
-
     public static void ordernar(int[] vetor, int inicio, int fim) {
 
         if (inicio < fim) {
+
             int meio = (inicio + fim) / 2;
+            
             ordernar(vetor, inicio, meio);
             ordernar(vetor, meio + 1, fim);
 
@@ -59,10 +54,6 @@ public class MergeSort {
 
         }
         
-        //Para mostrar o vetor em cada chamada recusiva
-        // System.out.println("Vetor " + inicio + " ate " + fim);
-        // imprimir(vetor);
-        // System.out.println();
     }
 
 }

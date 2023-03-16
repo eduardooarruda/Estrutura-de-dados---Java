@@ -5,9 +5,9 @@
 public class Exercicio1 {
     public static void main(String[] args) {
 
-        int[] n = { 2, 5, 8, 7};
+        int[] v = { 2, 5, 8, 7};
         
-        int r = encontrarValorMaximo(n, 0, 3);
+        int r = encontrarValorMaximo(v, 0, 3);
 
         System.out.println("Resultado = " + r);
         

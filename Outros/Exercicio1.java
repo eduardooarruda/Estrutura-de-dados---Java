@@ -5,7 +5,7 @@
 public class Exercicio1 {
     public static void main(String[] args) {
 
-        int[] v = { 2, 5, 8, 7};
+        int[] v = {2, 5, 8, 7} ;
         
         int r = encontrarValorMaximo(v, 0, 3);
 
@@ -21,15 +21,16 @@ public class Exercicio1 {
             return vetor[meio];
         }
 
-        else {
-
-            if (!(vetor[meio] > vetor[meio - 1])) {
-                return encontrarValorMaximo(vetor, inicio, meio);
-            }
-
-            return encontrarValorMaximo(vetor, meio, fim);
-
+        else if (vetor[meio] < vetor[meio - 1]) {
+            return encontrarValorMaximo(vetor, inicio, meio);
         }
+
+        else if (vetor[meio] < vetor[meio + 1]) {
+            return encontrarValorMaximo(vetor, meio, fim);
+        }
+
+        return -1;
+    
     }
 }
 
